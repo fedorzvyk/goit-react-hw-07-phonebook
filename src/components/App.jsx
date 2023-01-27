@@ -41,6 +41,7 @@ export default function App() {
       >
         <h1>Phonebook</h1>
         {isLoading && !error && <b>Request in progress...</b>}
+        {error && <b>{error}</b>}
         <ContactForm />
       </Box>
       <Box
