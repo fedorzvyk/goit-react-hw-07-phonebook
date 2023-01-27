@@ -1,14 +1,14 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { addTask } from 'redux/operations';
-import { getContacts } from 'redux/contactsSlice';
+import { addContact } from 'redux/operations';
+import { selectContacts } from 'redux/selectors';
 
 import { Form } from './ContactForm.styled';
 import { Input, Label, Button } from 'commonStyles/coommonStyles.styled';
 import { FaPhoneSquareAlt } from 'react-icons/fa';
-import { nanoid } from '@reduxjs/toolkit';
+// import { nanoid } from '@reduxjs/toolkit';
 
 export default function ContactForm() {
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
   //  console.log('first')
   const handleSubmit = e => {
@@ -16,22 +16,19 @@ export default function ContactForm() {
     const name = e.target.name.value;
     const phone = e.target.phone.value;
 
-    console.log(contacts);
-
     const repeatingName = contacts.items.find(contact => contact.name === name);
 
     if (repeatingName) {
       alert(`${name} is already in contacts.`);
       return null;
     }
-
     const newContact = {
-      id: nanoid(),
+      // id: '',
       name,
       phone,
     };
 
-    dispatch(addTask(newContact));
+    dispatch(addContact(newContact));
     e.target.reset();
   };
 

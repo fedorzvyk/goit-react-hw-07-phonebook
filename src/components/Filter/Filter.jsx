@@ -4,6 +4,7 @@ import { setFilter } from 'redux/filterSlice';
 
 const Filter = () => {
   const dispatch = useDispatch();
+
   return (
     <Label>
       Find contacts by name

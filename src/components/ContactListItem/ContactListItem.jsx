@@ -2,7 +2,7 @@ import { Button } from 'commonStyles/coommonStyles.styled';
 import { Item, ItemName } from './ContactListItem.styled';
 import { FaPhoneAlt, FaUserAlt, FaTrash } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
-import { deleteTask } from 'redux/operations';
+import { deleteContact } from 'redux/operations';
 import PropTypes from 'prop-types';
 
 const ContactListItem = ({ id, phone, name }) => {
@@ -16,7 +16,7 @@ const ContactListItem = ({ id, phone, name }) => {
       <span>
         <FaPhoneAlt fill="orange" /> {phone}
       </span>
-      <Button type="button" onClick={() => dispatch(deleteTask(id))}>
+      <Button type="button" onClick={() => dispatch(deleteContact(id))}>
         <FaTrash /> Delete
       </Button>
     </Item>

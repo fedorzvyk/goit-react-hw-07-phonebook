@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchContacts, addTask, deleteTask } from './operations';
+import { fetchContacts, addContact, deleteContact } from './operations';
 
 // import { persistReducer } from 'redux-persist';
 // import storage from 'redux-persist/lib/storage';
@@ -46,15 +46,15 @@ const contactsSlice = createSlice({
       state.items = action.payload;
     },
     [fetchContacts.rejected]: handleRejected,
-    [addTask.pending]: handlePending,
-    [addTask.fulfilled](state, action) {
+    [addContact.pending]: handlePending,
+    [addContact.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
       state.items.push(action.payload);
     },
-    [addTask.rejected]: handleRejected,
-    [deleteTask.pending]: handlePending,
-    [deleteTask.fulfilled](state, action) {
+    [addContact.rejected]: handleRejected,
+    [deleteContact.pending]: handlePending,
+    [deleteContact.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
       const index = state.items.findIndex(
@@ -62,11 +62,11 @@ const contactsSlice = createSlice({
       );
       state.items.splice(index, 1);
     },
-    [deleteTask.rejected]: handleRejected,
+    [deleteContact.rejected]: handleRejected,
   },
 });
 //
 // export const { addContact, deleteContact } = contactsSlice.actions;
-export const getContacts = state => state.contacts;
+// export const getContacts = state => state.contacts;
 
 export const contactsReducer = contactsSlice.reducer;
