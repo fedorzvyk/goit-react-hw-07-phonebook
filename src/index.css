@@ -25,13 +25,12 @@ body {
   height: 100hV;
   width: 100vw;
 }
-*/
 
-  /* @media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
   body { */
-  /* background-attachment: initial;
+/* background-attachment: initial;
     background-size: contain; */
-  /* }
+/* }
 }
 
 /* body:before {
