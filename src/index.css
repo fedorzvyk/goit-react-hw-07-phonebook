@@ -21,11 +21,14 @@ body {
   /* background-attachment: initial; */
   background-size: cover;
   background-repeat: inherit;
+
+  height: 100hV;
 }
+
 @media screen and (max-width: 480px) {
   body {
-    background-attachment: initial;
-    background-size: contain;
+    /* background-attachment: initial;
+    background-size: contain; */
   }
 }
 
