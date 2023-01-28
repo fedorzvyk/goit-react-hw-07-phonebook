@@ -15,18 +15,19 @@ body {
     ),
     url(images/phones.jpg);
 
-  background-attachment: initial;
+  background-attachment: fixed;
   /* background-position: bottom; */
 
   /* background-attachment: initial; */
-  background-size: contain;
+  background-size: cover;
   background-repeat: inherit;
 }
-/* @media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   body {
     background-attachment: initial;
+    background-size: contain;
   }
-} */
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
