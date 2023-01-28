@@ -41,4 +41,7 @@ export const Button = styled.button`
   :focus-visible {
     transform: scale(1.1);
   }
+  @media screen and (max-width: 480px) {
+    min-width: 80px;
+  }
 `;
