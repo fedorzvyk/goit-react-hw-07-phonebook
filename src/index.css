@@ -22,15 +22,28 @@ body {
   background-size: cover;
   background-repeat: inherit;
 
-  height: 100hV;
+  /* height: 100hV; */
 }
 
-/* @media screen and (max-width: 480px) {
-  body {
-    background-attachment: initial;
-    background-size: contain;
+@media (max-width: 768px) {
+  body:before {
+    content: '';
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
-} */
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
