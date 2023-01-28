@@ -4,7 +4,7 @@ import { FaPhoneAlt, FaUserAlt, FaTrash } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/operations';
 import PropTypes from 'prop-types';
-import { Box } from 'commonStyles/Box';
+// import { Box } from 'commonStyles/Box';
 
 const ContactListItem = ({ id, phone, name }) => {
   const dispatch = useDispatch();
