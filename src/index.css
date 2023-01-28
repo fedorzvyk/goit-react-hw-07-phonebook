@@ -15,7 +15,7 @@ body {
     ),
     url(images/phones.jpg);
 
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-size: cover;
 }
 

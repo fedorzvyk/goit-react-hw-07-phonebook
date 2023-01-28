@@ -6,6 +6,9 @@ export const Label = styled.label`
   width: 250px;
   line-height: ${p => p.theme.lineHeights.body};
   color: ${p => p.theme.colors.gray};
+  @media screen and (max-width: 480px) {
+    width: 230px;
+  }
 `;
 
 export const Input = styled.input`
@@ -15,6 +18,7 @@ export const Input = styled.input`
   outline: none;
   transition: transform 250ms linear, border-color 250ms linear,
     color 250ms linear;
+
   :hover,
   :focus-visible {
     color: ${p => p.theme.colors.text};
@@ -42,6 +46,9 @@ export const Button = styled.button`
     transform: scale(1.1);
   }
   @media screen and (max-width: 480px) {
-    min-width: 80px;
+    min-width: 70px;
+    /* padding: ${p => p.theme.space[2]}px; */
+    font-size: ${p => p.theme.fontSizes.xs};
+    gap: 5px;
   }
 `;
