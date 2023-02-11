@@ -4,6 +4,7 @@ import { setFilter } from 'redux/filterSlice';
 
 const Filter = () => {
   const dispatch = useDispatch();
+  console.log('first');
 
   return (
     <Label>

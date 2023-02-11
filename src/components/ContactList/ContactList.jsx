@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { selectvisibleContacts } from 'redux/selectors';
 
 const ContactList = () => {
-  // console.log('object');
+  console.log('object');
   const contacts = useSelector(selectvisibleContacts);
 
   return (

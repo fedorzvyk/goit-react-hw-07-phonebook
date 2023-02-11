@@ -7,8 +7,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgba(250, 225, 189, 0.2);
 
+  /* background: rgb(214, 189, 62);
+  background: linear-gradient(
+    343deg,
+    rgba(214, 189, 62, 1) 0%,
+    rgba(37, 60, 231, 1) 41%,
+    rgba(255, 226, 0, 1) 100%
+  ); */
+  background-color: rgba(250, 225, 189, 0.2);
   background-image: linear-gradient(
       25deg,
       rgba(71, 39, 1, 0.6),
@@ -17,16 +24,12 @@ body {
     url(images/phones.jpg);
 
   background-attachment: fixed;
-  /* background-position: bottom; */
 
-  /* background-attachment: initial; */
   background-size: cover;
   background-repeat: inherit;
-
-  /* height: 100hV; */
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   body:before {
     content: '';
 
@@ -44,7 +47,7 @@ body {
     bottom: 0;
     left: 0;
   }
-}
+} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
